@@ -4,30 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+
 
 const createTweetElement = function(tweetData) {
   const date = timeago.format(tweetData.created_at)
@@ -68,7 +45,7 @@ for (let showObj of tweets) {
 
 };
 
-renderTweets(data);
+//renderTweets(data);
 
 
 
@@ -84,33 +61,61 @@ $(document).ready(function () {
 $("#search-frm").on('submit', function (event) {
   // prevent form submission
   event.preventDefault();
+  const formData = $( this ).serialize();
+  const myLength = $("#tweet-text").val().length;
+  console.log(myLength)
+  if (myLength > 140 || myLength === 0) {
+   alert("Character length exceded");
+  } else {
+    $.ajax("/tweets", {
+      method: "POST", 
+      data: formData
+    
+    })
+    .done((results) => {
+      console.log(results); // array of objects
+    
+      loadtweets();
+    
+      // with the results => create the HTML element => attach to the DOM
+    })
+    .fail((err) => {
+      console.log(`Error: ${err.message}`);
+    })
+    .always(() => {
+      console.log('request to TV Maze done');
+    });
+    
+  }
 
   // this => <form>...</form>
-  console.log($( this ).serialize())
-  const formData = $( this ).serialize();
-
-// const inputBox = $(this).children('textarea[id="tweet-text"]');
-// const string = JSON.stringify(this[0]);
-
+    
+  
+  //console.log(formData)
+  
 
 
 
-const url = `http://localhost:8080/tweets`;
 
-$.ajax("/tweets", {method: "POST", data: formData})
-// $.ajax({
-//   url: url,
-//   method: 'POST',
-// })
+
+
+
+
+
+
+
+
+
 const loadtweets = function() {
   $.ajax('http://localhost:8080/tweets', { method: 'GET' })
-  .then(function (result) {
-    console.log('Success: ', JSON.stringify(result));
+  .done(function (result) {
+    renderTweets(result.reverse())
+   //console.log('Success: ', JSON.stringify(result));
     
   });
 }
 
-loadtweets(data);
+
 
 
 
