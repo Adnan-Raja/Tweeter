@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: Bungee;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-size: 24px;
+  padding: 1.5em;  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  
+}
+
+.nav-right {  
+  font-family: Source Sans Pro;
+  font-size: 20px;
+} 
+
+#arrow{
+  display:flex;
+  justify-content: center;
+  padding-top: 0.25em;
+  color: red;
+}

@@ -1,0 +1,88 @@
+.container{
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  width: 90%;
+  margin: 2em;
+}
+
+.submit-button{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;  
+ }
+
+.count{
+  margin-right: 8em;
+  }
+
+#tweet-text{
+  outline: none;
+  border: none;
+ border-bottom: 3px black solid;
+ padding: 0.25em;
+ background-color: #f4f1ec;
+ 
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+
+  padding: 1em;
+  border: 3px solid black;
+  width: 82%;
+    
+}
+
+article:hover {
+  box-shadow: 5px 7px #b0a9b8;
+  
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+   
+  margin-right: 10px;  
+}
+
+.namePic {
+  display: flex;
+  flex-direction: row;  
+}
+
+.name {
+  font-family: Source Sans Pro;
+  font-size: 20px;
+}
+
+.mrIsaac {
+  color: #b0a9b8;
+  font-size: 20px;
+}
+
+
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 3px black solid;
+  font-size: 15px;
+  padding-top: 0.25em ;
+  align-items: center;
+}
+
+.rightFoot{
+/* background-color: #4056A1; */
+  color: #4056A1;
+}
+.rightFoot i:hover {
+  color: goldenrod;
+}

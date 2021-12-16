@@ -1,0 +1,12 @@
+#head {
+  height : 400px;
+  background-color: #eb9c34;
+  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+  
+}
+
+.pic {
+display:flex;
+flex-direction: column;
+align-items: center;
+}
