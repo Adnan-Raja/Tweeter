@@ -102,19 +102,36 @@ $.ajax("/tweets", {method: "POST", data: formData})
 //   url: url,
 //   method: 'POST',
 // })
-  .done((results) => {
-    console.log(results); // array of objects
-
-    renderTweets(results);
-
-    // with the results => create the HTML element => attach to the DOM
-  })
-  .fail((err) => {
-    console.log(`Error: ${err.message}`);
-  })
-  .always(() => {
-    console.log('This is a tweet');
+const loadtweets = function() {
+  $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+  .then(function (result) {
+    console.log('Success: ', JSON.stringify(result));
+    
   });
+}
+
+loadtweets(data);
+
+
+
+
+
+
+
+
+  // .done((results) => {
+  //   console.log(results); // array of objects
+
+  //   renderTweets(results);
+
+  //   // with the results => create the HTML element => attach to the DOM
+  // })
+  // .fail((err) => {
+  //   console.log(`Error: ${err.message}`);
+  // })
+  // .always(() => {
+  //   console.log('This is a tweet');
+  // });
 
 });
 
