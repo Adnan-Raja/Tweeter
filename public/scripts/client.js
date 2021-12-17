@@ -26,7 +26,7 @@ $(document).ready(function () {
       </header>   
     
     </div>
-     <div><p>${tweetData.content.text}</p></div>
+     <div><p>${escape(tweetData.content.text)}</p></div>
     <footer>
       <p class="timeCount">${date}</p>
       <div class="rightFoot">
@@ -54,7 +54,11 @@ $(document).ready(function () {
   
   };
   
-
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
 
 // catch the form submit
@@ -103,11 +107,7 @@ const loadtweets = function() {
   $.ajax('http://localhost:8080/tweets', { method: 'GET' })
   .done(function (result) {
     renderTweets(result)
-   //console.log('Success: ', JSON.stringify(result));
-    
   });
-  //.then(renderTweets)
-
 }
 loadtweets();
 
