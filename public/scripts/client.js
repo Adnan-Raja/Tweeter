@@ -26,7 +26,7 @@ $(document).ready(function () {
       </header>   
     
     </div>
-     <div><p>${escape(tweetData.content.text)}</p></div>
+     <div><p class="tweetBody">${escape(tweetData.content.text)}</p></div>
     <footer>
       <p class="timeCount">${date}</p>
       <div class="rightFoot">
@@ -60,8 +60,10 @@ $(document).ready(function () {
     return div.innerHTML;
   };
 
-
-// catch the form submit
+  // Error messages hidden before it meets the condition
+  $("#error-message").hide();
+  $("#error-message1").hide();
+  
 
 $("#search-frm").on('submit', function (event) {
   // prevent form submission
@@ -73,11 +75,18 @@ $("#search-frm").on('submit', function (event) {
   //length of message is checked and validated
   const myLength = $("#tweet-text").val().length;
   //console.log(myLength)
+
+  
+
   if (myLength === 0) {
-   alert("Write something to post");
+    $("#error-message").slideDown("slow");   //error messages slides down when message box is empty
+  //  alert("Write something to post");
   } else if (myLength > 140) {
-    alert("Character limit exceded");
+    $("#error-message").slideUp("slow");
+    $("#error-message1").slideDown("slow"); //error message when it exceeds character limit
    }  else {
+    $("#error-message").slideUp("slow");
+    $("#error-message1").slideUp("slow");
      //post form data to /tweets
     $.ajax("/tweets", { 
       method: "POST", 

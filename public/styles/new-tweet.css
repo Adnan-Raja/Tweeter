@@ -1,7 +1,5 @@
 .container{
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
+  
   width: 90%;
   margin: 2em;
 }
@@ -9,19 +7,19 @@
 .submit-button{
   display:flex;
   flex-direction: row;
-  justify-content: space-between;  
+  justify-content: space-between;
+  width: 91%;
  }
 
-.count{
-  margin-right: 8em;
-  }
 
 #tweet-text{
   outline: none;
   border: none;
+  width: 91%;
  border-bottom: 3px black solid;
  padding: 0.25em;
  background-color: #f4f1ec;
+ font: italic bold;
  
 }
 
@@ -29,7 +27,6 @@ article {
   display: flex;
   flex-direction: column;
   margin: 2em;
-
   padding: 1em;
   border: 3px solid black;
   width: 82%;
@@ -47,8 +44,8 @@ article:hover {
   justify-content: space-between;
   align-items: center;
 }
-.icon {
-   
+
+.icon {   
   margin-right: 10px;  
 }
 
@@ -86,3 +83,54 @@ footer{
 .rightFoot i:hover {
   color: goldenrod;
 }
+
+#error-message {
+   justify-self: center;
+     display: inline-block;
+    width:60%;
+   border: 3px solid red;
+   align-items: center;
+    color: red;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    padding: 20px;
+   
+    
+    font-family: Helvetica,Arial,sans-serif;
+
+}
+
+#error-message1 {
+  
+justify-self: center;
+  /* width: 100%;  */
+  display: inline-block;
+  width:60%;
+ border: 3px solid red;
+ align-items: center;
+  color: red;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  padding: 20px;
+ 
+  
+  font-family: Helvetica,Arial,sans-serif;
+
+}
+
+.btn {
+  font-family: Bungee;
+  font-size: 17px;
+  background-color: #4056A1;
+  color: white;
+}
+
+.tweetBody{
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+
+}
+
+

@@ -3,7 +3,8 @@ nav {
   justify-content: space-between;
   font-family: Bungee;
   color: #FFFFFF;
-  background-color: #4056A1;
+  background-color: #eb9c34;
+  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
   font-size: 24px;
   padding: 1.5em;  
   position: fixed;
