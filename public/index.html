@@ -26,16 +26,16 @@
     
   </head>
 
-  <body>
+  <body id="top">
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
       <div class="nav-right">
       <div><b>Write</b> a new tweet</div>
-      <div id="arrow"><i class="fas fa-angle-double-down"></i></div>
+      <div id="arrow" class="bounce"><a href="#top"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     </nav>
-
+<div id="size-desktop">
     <header id="head">
       <div class="pic">
       <div>
@@ -49,6 +49,7 @@
     </header>
 
     <!-- Page-specific (main) content here -->
+    <div id="tweets">
     <main class="container">
       <section class="new-tweet">
         <!--<h2>Compose Tweet</h2>-->
@@ -73,6 +74,8 @@
     <main id="tweets-container">
     
     </main>
+    </div>
+ </div>   
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>

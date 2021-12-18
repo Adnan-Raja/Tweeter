@@ -38,11 +38,12 @@ article:hover {
   
 }
 
-.head {
+.tweetHead {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .icon {   
@@ -87,7 +88,7 @@ footer{
 #error-message {
    justify-self: center;
      display: inline-block;
-    width:60%;
+    width:70%;
    border: 3px solid red;
    align-items: center;
     color: red;
@@ -105,7 +106,7 @@ footer{
 justify-self: center;
   /* width: 100%;  */
   display: inline-block;
-  width:60%;
+  width:70%;
  border: 3px solid red;
  align-items: center;
   color: red;
@@ -130,6 +131,60 @@ justify-self: center;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-all;
+}
+
+
+
+@media (min-width:768px) and (max-width:1023px){
+  #size-desktop {
+    display: flex;
+    flex-direction: row;
+  }  
+
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+
+  #head {
+    width: 50%;
+    height: 50%;
+    padding:20px;
+    margin:60px;
+    margin-top: 100px;
+   
+  }
+
+  
+}
+
+
+
+
+@media only screen and (min-width:1024px){
+  #size-desktop {
+    display: flex;
+    flex-direction: row;
+  }  
+
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+
+  #head {
+    width: 50%;
+    height: 50%;
+    padding:20px;
+    margin:60px;
+    margin-top: 100px;
+   
+  }
+
+  .mrIsaac {
+    display: none;
+  }
+
 
 }
 

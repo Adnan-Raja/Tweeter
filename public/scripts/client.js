@@ -19,10 +19,12 @@ $(document).ready(function () {
     const $tweet = $(`
     <article>
     <div >
-      <header class="head">
+      <header class="tweetHead">
+      
         <div class="namePic"><img class="icon" src=${tweetData.user.avatars}>
         <p class="name">${tweetData.user.name}</p> </div>
         <div class="mrIsaac">${tweetData.user.handle}</div>
+       
       </header>   
     
     </div>
