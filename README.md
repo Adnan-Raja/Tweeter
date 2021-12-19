@@ -12,12 +12,12 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-!["Screenshot description"] (https://github.com/Adnan-Raja/Tweeter/tree/master/docs)
+!["Screenshot description"](https://github.com/Adnan-Raja/Tweeter/tree/master/docs)
 
 ## Screenshots
-!["Screenshot of desktop view"] (https://github.com/Adnan-Raja/Tweeter/blob/master/docs/Screen%20Shot(desktop%20display).png?raw=true)
+!["Screenshot of desktop view"](https://github.com/Adnan-Raja/Tweeter/blob/master/docs/Screen%20Shot(desktop%20display).png?raw=true)
 
-!["Screenshot of smaller view"] (https://github.com/Adnan-Raja/Tweeter/blob/master/docs/Screen%20Shot(small%20display).png?raw=true)
+!["Screenshot of smaller view"](https://github.com/Adnan-Raja/Tweeter/blob/master/docs/Screen%20Shot(small%20display).png?raw=true)
 
 
 ## Dependencies
