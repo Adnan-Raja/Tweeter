@@ -1,3 +1,4 @@
+/* Navigation settings */
 nav {
   display: flex;
   justify-content: space-between;
@@ -10,23 +11,24 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
-  
+  z-index: 1;  
 }
 
+/* font settings for right side items of nav */
 .nav-right {  
   font-family: Source Sans Pro;
   font-size: 20px;
 } 
 
+/* display settings for arrow */
 #arrow{
   display:flex;
   justify-content: center;
   padding-top: 0.25em;
-  color: red;
-  
+  color: red;  
 }
 
+/* arrow has an id which brings us back to top of the body so color of <a> tag is changed */
 #arrow a {
   color: red;
 }

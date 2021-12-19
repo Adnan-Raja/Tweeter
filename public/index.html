@@ -35,28 +35,29 @@
       <div id="arrow" class="bounce"><a href="#top"><i class="fas fa-angle-double-down"></i></a></div>
     </div>
     </nav>
-<div id="size-desktop">
-    <header id="head">
-      <div class="pic">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
+    <!-- Header created with picture and name -->
+    <div id="size-desktop">
+      <header id="head">
+        <div class="pic">
+          <div>
+            <img src="/images/profile-hex.png"> 
+          </div>
       <br>
-      <div>
-          <p class="main-name"><b>Julia</b> Roberts</p>
-      </div>
-      </div>
+          <div>
+            <p class="main-name"><b>Julia</b> Roberts</p>
+          </div>
+        </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <div id="tweets">
     <main class="container">
       <section class="new-tweet">
-        <!--<h2>Compose Tweet</h2>-->
+        <!-- Error messages created and will display if empty post is submitted or more than 140 characters are submitted-->
         <div ><p id="error-message">&#9888 Nothing to post. Please write something to tweet. &#9888</p></div>
         <div ><p id="error-message1">&#9888 Too long. Reminder: 140 characters allowed. &#9888</p></div>
         <div class= "class1">
-          
+          <!-- Form to compose tweet-->
           <div>
           <form action="/tweets" method="POST" id="search-frm"> </div>
           <div class= "text-fields">
@@ -71,6 +72,7 @@
       </section>
     </main>
 
+    <!-- This container will hold tweet data and will display on page. data rendered and added from client.js file. -->
     <main id="tweets-container">
     
     </main>
