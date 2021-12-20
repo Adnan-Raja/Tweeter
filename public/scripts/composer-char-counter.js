@@ -16,11 +16,15 @@ $(document).ready(function() {
     else {
       $(".counter").css({"color": "red"});
     }
+    
   });
   $tweetText.on("keydown", function tweetIncreaseChar(e) {
     const key = e.key;
     if (key === "Backspace" && tweetCounter.value < 140) {
       tweetCounter.value++;
+    }
+    if (tweetCounter.value >= 0) {
+      $(".counter").css({"color": "black"});
     }
   });
 });

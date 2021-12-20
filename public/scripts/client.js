@@ -40,6 +40,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     //each time new list of tweets is loaded old container is emptied
     $("#tweets-container").empty();
+    
     // loops through tweets
     for (let showObj of tweets) {
       // Targetting the container and appending the item to it
@@ -61,13 +62,19 @@ $(document).ready(function() {
   // Error messages for "empty tweet field and characters over 140 charecters" are hidden before it meets the condition
   $("#error-message").hide();
   $("#error-message1").hide();
+
+  
   
   $("#search-frm").on('submit', function(event) {
     // prevent form submission
     event.preventDefault();
 
+    const tweetCounter = $(".counter")[0];
+    
+
     //Form data is serialized.
     const formData = $(this).serialize();
+    
 
     //length of message is checked and validated
     const myLength = $("#tweet-text").val().length;
@@ -86,11 +93,12 @@ $(document).ready(function() {
       $.ajax("/tweets", {
         method: "POST",
         data: formData
-    
-      })
-   
+        
+      })   
         .done((results) => {
           loadtweets(results);
+          $("#tweet-text").val('');
+          tweetCounter.value = 140;
     
         })
         .fail((err) => {
