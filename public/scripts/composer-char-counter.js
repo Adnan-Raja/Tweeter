@@ -4,11 +4,11 @@ $(document).ready(function() {
   const tweetCounter = $(".counter")[0];
   tweetCounter.value = 140;
    
-  $tweetText.on("keypress", function tweetListener() {
+  $tweetText.on("input", function tweetListener() {
     // console.log(tweetCounter)
     
     if (this) {
-      tweetCounter.value--;
+      tweetCounter.value = 140 - this.value.length;
     }
     if ((tweetCounter.value) > -1) {
       $(".counter").css({"color": "black"});
